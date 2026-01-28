@@ -2,7 +2,8 @@
   "name": "sg-moe-aidt-content",
   "version": "0.0.0",
   "license": "UNLICENSED",
-  "homepage": "/",
+  "homepage": "https://e1ysaa.github.io/PHYSICS_SIM_TASK",
+
   "engines": {
     "node": "~20.5"
   },
@@ -11,7 +12,10 @@
     "start": "rsbuild dev",
     "build": "rsbuild build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0",
-    "patch-package": "patch-package"
+    "patch-package": "patch-package",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
   },
   "prettier": "@elice/prettier-config",
   "dependencies": {
@@ -96,6 +100,7 @@
     "eslint-plugin-jsdoc": "~46.4.0",
     "eslint-plugin-prettier": "~5.0.0",
     "eslint-plugin-simple-import-sort": "~10.0.0",
+    "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "patch-package": "^8.0.0",
     "prettier": "^3.5.3",
